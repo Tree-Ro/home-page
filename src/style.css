@@ -15,6 +15,9 @@
 body {
   box-sizing: border-box;
   height: 100%;
+  position: relative;
+
+  font-size: larger;
 
   display: grid;
   grid-auto-flow: row;
@@ -70,7 +73,7 @@ section.my-work-container h2 {
 }
 section.my-work-container .my-work {
   display: grid;
-  grid-template-columns:repeat(auto-fill, minmax(300px,1fr));
+  grid-template-columns:repeat(auto-fill, minmax(350px,1fr));
   grid-gap: 50px;
 }
 .my-work .work {
@@ -105,8 +108,8 @@ img.clothing {
 }
 .my-work .work > div .links {
   position: absolute;
-  bottom: 5px;
-  right: 5px;
+  bottom: 2px;
+  right: 2px;
   display: flex;
   gap: 10px;
 }
@@ -151,5 +154,18 @@ footer .footer-info > * {
 
 
 @media (max-width: 650px) {
+
+  section.about-me-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  section.my-work-container .my-work {
+    grid-template-columns:repeat(auto-fill, minmax(300px,1fr));
+  }
+
+  footer {
+    flex-direction: column;
+  }
 
 }
