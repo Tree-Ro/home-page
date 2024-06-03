@@ -1,0 +1,96 @@
+:root {
+  --prim-background-color: #0891b2;
+  --second-background-color: white;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  line-height: 1.5;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100%;
+
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 25px;
+
+  background: linear-gradient(170deg, var(--prim-background-color) 30%, var(--second-background-color) 30%);
+}
+
+section.about-me-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+section.about-me-container .img-wrapper {
+  width: 30%;
+  min-width: 300px;
+
+  position: relative;
+  
+}
+section.about-me-container .img-wrapper div {
+  position: absolute;
+  bottom: 8%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75);
+
+  font-size: 2rem;
+}
+section.about-me-container .img-wrapper img {
+  width: 100%;
+  box-shadow: black 0px 5px 8px;
+}
+section.about-me-container .about-me-info {
+  display: grid;
+
+  background-color: white;
+  padding: 1rem;
+  max-width: 70%;
+  box-shadow: black 5px 5px 10px;
+}
+
+
+section.my-work-container {
+  padding: 25px;
+}
+section.my-work-container .my-work {
+  display: grid;
+  grid-template-columns:repeat(auto-fill, minmax(350px,1fr));
+  grid-gap: 25px;
+
+  padding: 25px;
+}
+
+footer {
+  display: grid;
+  grid-auto-flow: column;
+  background-color: var(--prim-background-color);
+  color: white;
+  padding: 50px;
+}
+footer .footer-info {
+  display: grid;
+  grid-gap: 0px;
+  align-items: center;
+}
+footer .footer-info > * {
+  height: max-content;
+}
+
+
+@media (max-width: 650px) {
+
+}
